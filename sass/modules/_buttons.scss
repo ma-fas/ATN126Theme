@@ -1,0 +1,30 @@
+.button {
+	color: $light;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.06rem;
+	cursor: pointer;
+}
+
+.btn-jumbo {
+	background-color: transparent;
+	border: 3px solid $light;
+	padding: 0.6rem 2rem;
+	@include arrow(transparent, $light);
+}
+
+.btn-work {
+	padding: 0.5rem 1.5rem;
+}
+
+.fig1 .button {@include arrow($accent1, $accent1);}
+.fig2 .button {@include arrow($accent2, $accent2);}
+.fig3 .button {@include arrow($accent3, $accent3);}
+
+.btn-submit {
+	padding:  0.35rem 1.5rem;
+	background-color: $bg_secondary;
+	border-radius: 2px;
+	margin-bottom: 0;
+	@include arrow($bg_secondary, $border);
+}

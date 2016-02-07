@@ -1,0 +1,73 @@
+.icon {
+	position: relative;
+	display: block;
+	width: 6rem;
+	height: 6rem;
+	margin: 0 auto 1.7rem auto;
+	background-color: $light;
+	border-radius: 50%;
+	
+	&:before {
+		content: '';
+		position: absolute;
+		display: block;
+		top: calc(50% - 1.6rem);
+		left: calc(50% - 1.7rem);
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+	}
+	&.icon1:before {background: url('../img/icon1.png') no-repeat;}
+	&.icon2:before {
+		background: url('../img/icon2.png') no-repeat;
+		left: calc(50% - 1.4rem);
+	}
+	&.icon3:before {
+		background: url('../img/icon3.png') no-repeat;
+		top: calc(50% - 1.4rem);
+	}
+	&.icon4:before {background: url('../img/icon4.png') no-repeat;}
+	&.icon5:before {background: url('../img/icon5.png') no-repeat;}
+}
+
+form {
+	width: 95%;
+	max-width: 500px;
+	@include margin(0);
+	@extend .content-center;
+	input,
+	textarea {
+		font-family: inherit;
+		font-size: inherit;
+		padding: 0.8rem;
+		background-color: $bg_secondary;
+		border: 2px solid $border;
+		border-radius: 2px;
+		color: $light;
+		&::placeholder {
+			color: $border;
+		}
+		&:focus {
+			outline-color: $light;
+		}
+	}
+	label:not(:last-of-type){
+		display: inline-block;
+		width: 47%;
+		&:first-child {
+			float: left;
+		}
+		&:nth-child(2) {
+			float: right;
+		}
+		input {
+			width: 100%;
+		}
+	}
+	textarea {
+		width: 100%;
+		min-height: 9rem; 
+		@include margin(4%);
+		resize: none;
+	}
+}

@@ -1,0 +1,61 @@
+/* ABOUT */
+
+#about {
+	z-index:20;
+	.container {
+		margin-top: -5rem;
+	}
+}
+
+.about-unit {
+	display: block;
+	width: 100%;
+	max-width: 500px;
+	min-height: 300px;
+	padding: 3rem;
+	@include margin(0);
+	&.unit1 {background-color: $accent1;}
+	&.unit2 {background-color: $accent2;}
+	&.unit3 {background-color: $accent3;}
+	&.unit4 {background-color: $accent4;}
+	.about-wrap {
+		max-width: 400px;
+		@include margin(0);
+	}
+}
+
+/* WORK */
+
+figure {
+	@extend .content-center;
+	@include margin(2rem);
+	@include padding(3rem);
+	width: 90%;
+	background-color: $bg_secondary;
+	max-width: 350px;
+	border-top: 6px solid;
+	img {
+		width: 50%;
+		border-radius: 50%;
+		border: 2px solid $bg_secondary;
+	}
+	figcaption {
+		margin: 2rem auto 0 auto;
+		width: 80%;
+		p {
+			line-height: 1.4rem;
+			margin-bottom: 2rem;
+			opacity: 0.45;
+		}
+	}
+	&.fig1 {
+		border-top-color: $accent1;
+	}
+	&.fig2 {
+		border-top-color: $accent2;
+	}
+	&.fig3 {
+		border-top-color: $accent3;
+		
+	}
+}

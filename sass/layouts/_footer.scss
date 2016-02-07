@@ -1,0 +1,56 @@
+ footer {
+ 	background-color: $bg_secondary;
+ 	@include padding(2rem);
+ 	@extend .content-center;
+ 	line-height: 1.7rem;
+	
+	.icons-social {
+		line-height: 40px;
+		@include margin(0.3rem);
+		a {
+			display: inline-block;
+			color: $bg_secondary;
+		}
+	}
+	.fa {
+		color: $bg_secondary;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		background-color: $light;
+		border-radius: 50%;
+		font-size: 1.4rem;
+		vertical-align: middle;
+		text-align: center;
+		margin: 0.5rem;
+		transition: all 0.6s ease;
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+
+ 	.footer-contact {
+ 		position: relative;
+ 		padding-bottom: 1rem;
+ 		margin-bottom: 1rem;
+ 		&::after {
+ 			content: '';
+ 			position: absolute;
+ 			display: block;
+ 			height: 2px;
+ 			width: 30%;
+ 			bottom: 0;
+ 			left: 35%;
+ 			background-color: $border;
+ 		} 
+ 	}
+
+ 	.footer-credentials {
+ 		span {
+ 			color: $accent2;
+ 		}
+ 		&:nth-child(2) {
+ 			display: inline;
+ 		}
+ 	}
+ }
